@@ -20,3 +20,11 @@ __pycache__/
 
 # Dados locais do n8n
 n8n_data/
+
+# Bases de conhecimento e documentos confidenciais
+knowledge_base/*
+
+# Bancos de dados locais
+*.db
+*.sqlite
+*.sqlite3

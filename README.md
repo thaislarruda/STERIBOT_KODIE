@@ -110,14 +110,12 @@ O registro representa o histórico da interação processada pelo sistema, não 
 ### 6.2 Clonar o repositório
 
 git clone https://github.com/thaislarruda/STERIBOT_KODIE.git
+o arquivo .env.example deve ser copiado para .env, mantendo o .env.example sem credenciais reais.
 cd STERIBOT_KODIE
-
-Substitua o endereço pelo link definitivo do repositório.
 
 ### 6.3 Configurar as variáveis de ambiente
 
 Crie uma cópia do arquivo `.env.example` com o nome `.env`.
-
 Preencha a chave de acesso ao Gemini:
 
 ```env
