@@ -1,0 +1,22 @@
+
+# Credenciais
+.env
+.env.*
+!.env.example
+
+# Ambientes virtuais
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.log
+
+# Testes e arquivos temporários
+.pytest_cache/
+.coverage
+.DS_Store
+
+# Dados locais do n8n
+n8n_data/

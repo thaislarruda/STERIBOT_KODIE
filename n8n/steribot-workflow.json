@@ -1,0 +1,275 @@
+{
+  "name": "STERIBOT - Registro de Atendimentos",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "steribot-atendimento",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "aff9d1b5-569c-4852-b2cb-0eba99933bc3",
+      "name": "Webhook",
+      "webhookId": "08cb0844-95d9-4d55-a425-905b9711049c"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "aeea7ca8-6714-4a3c-9e81-d1a4705427c5",
+              "name": "sessao_id",
+              "value": "={{ $json.body.sessao_id }}",
+              "type": "string"
+            },
+            {
+              "id": "7cac60bb-189f-4682-a27c-85ec2b4f0bc3",
+              "name": "resposta",
+              "value": "={{ $json.body.resposta }}",
+              "type": "string"
+            },
+            {
+              "id": "1862dc1c-b391-4c14-881d-8d16534ee885",
+              "name": "categoria",
+              "value": "={{ $json.body.categoria }}",
+              "type": "string"
+            },
+            {
+              "id": "77117af8-3e59-4260-af22-a1a86d01eb33",
+              "name": "equipamento",
+              "value": "={{ $json.body.equipamento }}",
+              "type": "string"
+            },
+            {
+              "id": "90c33fa7-7a10-465e-baf9-4e21751f8b02",
+              "name": "problema",
+              "value": "={{ $json.body.problema }}",
+              "type": "string"
+            },
+            {
+              "id": "8dfa6cc0-b08c-40c6-9bd0-da0dca8eb52e",
+              "name": "prioridade",
+              "value": "={{ $json.body.prioridade }}",
+              "type": "string"
+            },
+            {
+              "id": "318f0c6e-1619-407e-b8cc-76b99461391d",
+              "name": "nivel_atendimento",
+              "value": "={{ $json.body.nivel_atendimento }}",
+              "type": "string"
+            },
+            {
+              "id": "d8109cf5-90a4-46dd-af71-eb4cdec84bc0",
+              "name": "status",
+              "value": "={{ $json.body.status }}",
+              "type": "string"
+            },
+            {
+              "id": "2fbd10aa-f9ad-414a-a771-86f62f06ee28",
+              "name": "proxima_acao",
+              "value": "={{ $json.body.proxima_acao }}",
+              "type": "string"
+            },
+            {
+              "id": "19d82f02-0666-4452-85e4-69855b1f5b9a",
+              "name": "necessita_atendimento_humano",
+              "value": "={{ $json.body.necessita_atendimento_humano }}",
+              "type": "boolean"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        224,
+        0
+      ],
+      "id": "ecc26fd8-afbd-4c09-811c-c50f43244c4d",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "dataTableId": {
+          "__rl": true,
+          "value": "u3TnRGGcXrpq6FMn",
+          "mode": "list",
+          "cachedResultName": "steribot_atendimentos",
+          "cachedResultUrl": "/projects/0Klx4gK0s9vGGGhv/datatables/u3TnRGGcXrpq6FMn"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "necessita_atendimento_humano": "={{ $json.necessita_atendimento_humano }}",
+            "sessao_id": "={{ $json.sessao_id }}",
+            "resposta": "={{ $json.resposta }}",
+            "categoria": "={{ $json.categoria }}",
+            "equipamento": "={{ $json.equipamento }}",
+            "problema": "={{ $json.problema }}",
+            "prioridade": "={{ $json.prioridade }}",
+            "nivel_atendimento": "={{ $json.nivel_atendimento }}",
+            "status": "={{ $json.status }}",
+            "proxima_acao": "={{ $json.proxima_acao }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "sessao_id",
+              "displayName": "sessao_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "resposta",
+              "displayName": "resposta",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "categoria",
+              "displayName": "categoria",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "equipamento",
+              "displayName": "equipamento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "problema",
+              "displayName": "problema",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "prioridade",
+              "displayName": "prioridade",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "nivel_atendimento",
+              "displayName": "nivel_atendimento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "status",
+              "displayName": "status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "proxima_acao",
+              "displayName": "proxima_acao",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "necessita_atendimento_humano",
+              "displayName": "necessita_atendimento_humano",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "boolean",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        448,
+        0
+      ],
+      "id": "55258c58-19ad-473c-aae1-1f5bafed5ccb",
+      "name": "Insert row"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Insert row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "1de5ae4d-c7ef-46f0-907d-01ade0262e4e",
+  "meta": {
+    "instanceId": "0e171ee0eda2617164d9273e9b584d4fb846599b089d079c1cd6fa3309dd8146"
+  },
+  "nodeGroups": [],
+  "id": "GmBCm7JiivjXxJeZ",
+  "tags": []
+}

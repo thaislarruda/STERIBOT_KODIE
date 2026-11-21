@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102D4F">
+  <meta name="description" content="STERIBOT - Assistente virtual de suporte técnico STERIFAST.">
+  <title>STERIBOT | Suporte Técnico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="chat">
+
+    <header class="chat__header">
+      <div class="chat__identity">
+        <div class="chat__avatar">
+          <img
+            src="steribot-avatar.png"
+            alt="Robô STERIBOT"
+          >
+        </div>
+
+        <div class="chat__titles">
+          <h1 class="chat__title">STERIBOT</h1>
+          <span class="chat__status">Assistente virtual STERIFAST</span>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        class="btn btn--secondary"
+        id="clearBtn"
+      >
+        Nova conversa
+      </button>
+    </header>
+
+    <section
+      class="chat__messages"
+      id="messages"
+      role="log"
+      aria-live="polite"
+      aria-label="Histórico de mensagens"
+    >
+
+      <!-- Tela inicial -->
+      <div class="welcome" id="welcomePanel">
+
+        <div class="welcome__robot">
+          <img src="steribot-avatar.png" alt="">
+        </div>
+
+        <h2>Olá! Eu sou o STERIBOT.</h2>
+
+        <p class="welcome__description">
+          Estou aqui para ajudar você com o suporte técnico
+          dos equipamentos STERIFAST.
+        </p>
+
+        <p class="welcome__question">
+          Qual equipamento está apresentando dificuldade?
+        </p>
+
+        <div class="quick-actions">
+
+          <button
+            type="button"
+            class="quick-action"
+            data-message="Preciso de suporte com uma impressora de etiquetas."
+          >
+            <span class="quick-action__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                <path d="M7 14h10v7H7zM17 11h.01"/>
+              </svg>
+            </span>
+
+            <span class="quick-action__text">
+              <strong>Impressora de etiquetas</strong>
+              <small>Problemas na impressão de etiquetas</small>
+            </span>
+
+            <span class="quick-action__arrow">›</span>
+          </button>
+
+          <button
+            type="button"
+            class="quick-action"
+            data-message="Preciso de suporte com uma impressora de comprovantes."
+          >
+            <span class="quick-action__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 8V3h10v5M7 17H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+                <path d="M7 14h10v7H7zM9 17h6M9 19h4"/>
+              </svg>
+            </span>
+
+            <span class="quick-action__text">
+              <strong>Impressora de comprovantes</strong>
+              <small>Problemas com bobina ou impressão</small>
+            </span>
+
+            <span class="quick-action__arrow">›</span>
+          </button>
+
+          <button
+            type="button"
+            class="quick-action"
+            data-message="Preciso de suporte com uma impressora de ciclos."
+          >
+            <span class="quick-action__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="5" y="3" width="14" height="18" rx="2"/>
+                <path d="M8 7h8M8 11h8M8 15h5M8 18h3"/>
+              </svg>
+            </span>
+
+            <span class="quick-action__text">
+              <strong>Impressora de ciclos</strong>
+              <small>Problemas com relatórios e ciclos</small>
+            </span>
+
+            <span class="quick-action__arrow">›</span>
+          </button>
+
+        </div>
+
+        <p class="welcome__note">
+          Se preferir, descreva diretamente o problema no campo abaixo.
+        </p>
+
+      </div>
+
+    </section>
+
+    <footer class="chat__composer">
+
+      <label class="visually-hidden" for="messageInput">
+        Mensagem
+      </label>
+
+      <textarea
+        id="messageInput"
+        class="input"
+        rows="1"
+        placeholder="Como posso ajudar com seu equipamento?"
+        aria-label="Digite sua mensagem"
+      ></textarea>
+
+      <button
+        type="button"
+        class="btn btn--primary"
+        id="sendBtn"
+      >
+        Enviar
+      </button>
+
+    </footer>
+
+    <div class="chat__footer">
+      <span>STERIFAST</span>
+      <span>Suporte técnico inteligente</span>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
