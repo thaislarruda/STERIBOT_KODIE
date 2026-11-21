@@ -109,10 +109,8 @@ O registro representa o histórico da interação processada pelo sistema, não 
 
 ### 6.2 Clonar o repositório
 
-```bash
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
+git clone https://github.com/thaislarruda/STERIBOT_KODIE.git
 cd STERIBOT_KODIE
-```
 
 Substitua o endereço pelo link definitivo do repositório.
 
@@ -193,10 +191,6 @@ Importe o arquivo `n8n/steribot-workflow.json` caso esteja configurando uma nova
 Configure a Data Table `steribot_atendimentos` com os campos utilizados no fluxo e ajuste o vínculo do nó de registro para a tabela da nova instalação.
 
 Publique o workflow e configure a URL de produção do Webhook na variável `N8N_WEBHOOK_URL` do arquivo `.env`.
-
-## 7. Evidências e documentação
-
-A documentação visual do projeto está organizada na pasta `docs/evidencias/`.
 
 ## 7. Evidências e documentação
 
